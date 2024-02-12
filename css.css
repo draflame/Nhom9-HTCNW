@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    margin: 20px;
+    height: 100px;
+    width: 500px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.main input{
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    border: 2px solid #999;
+    outline: none;
+    transition: 0.25s ease;
+}
+.form input:focus{
+    border-color: rgb(4, 87, 71);
+}
+.form{
+    position: relative;
+}
+.form label{
+    font-size: 20px;
+    text-transform: capitalize;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 11px;
+    user-select: none;
+    color: #999;
+    pointer-events: none;
+    transition: 0.25s ease;
+}
+.form input:not(:placeholder-shown)+ label,
+.form input:focus+ label{
+    top: 0;
+    left: 6px;
+    padding: 0 5px;
+    display: inline-block;
+    background-color: white;
+    color: #045747;
+}
+
+.dropdown{
+    margin: 20px;
+    width: 200px;
+    position: relative;
+}
+.dropdown-select{
+    width: 100%;
+    border: 2px solid #eee;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.dropdown-menu{
+    margin-top: 10px;
+    list-style: none;
+    border: 2px solid #eee;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.25s ease; 
+}
+.dropdown-menu::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    transform: translateY(-100%);
+    background-color: transparent;
+}
+.dropdown-menu li{
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: 0.5s ease;
+    user-select: none;
+    background-color: white;
+}
+
+.dropdown-menu li:hover{
+    background-color: #f4f4f4;
+    color: aqua;
+}
+.dropdown:hover .dropdown-menu{
+    opacity: 1;
+    visibility: visible;
+}
+
+.card-list{
+    display: flex;
+    justify-content: space-evenly;
+}
+.card{
+    margin: 20px;
+    width: 200px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+.card-img{
+    height: 250px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: 0.5s ease-in;
+    flex-shrink: 0;
+}
+.img-container{
+    height: 250px;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.card-img:hover{
+    filter: brightness(0.8);
+    scale: 1.2;
+    overflow: hidden;
+}
+.card-top{
+    padding: 10px;
+    user-select: none;
+}
+.card-bottom{
+    padding: 10px;
+    margin:0 auto;
+    margin-top: auto;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    cursor: pointer;
+}
+.card-bottom button{
+    height: 30px;
+    width: 100px;
+    background-color: transparent;
+    border: 2px solid #045747;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+    position: relative;
+}
+
+.card-bottom button{
+    background-color: transparent;
+    border: 2px solid #045747;
+    position: relative;
+}
+.card-bottom button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #045747;
+    transition: 0.5s ease-in;
+}
+.card-bottom button:hover{
+    color: white;
+}
+.card-bottom button:hover::before{
+    width: 100%;
+    z-index: -1;
+}
+.click{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    transition: 0.5s ease-in;
+}
+.click-button{
+    margin-left: 30px;
+}
+.click-button button{
+    height: 30px;
+    width: 100px;
+    /* background-color: transparent; */
+    border: 2px solid #045747;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+    position: relative;
+}
+.alert{
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #045747;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.alert button{
+    height: 30px;
+    width: 100px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+    position: relative;
+}
+  

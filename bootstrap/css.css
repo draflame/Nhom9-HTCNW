@@ -1,0 +1,7 @@
+.col{
+    background-color: black;
+    padding-right: 5px;
+}
+.progress{
+    user-select: none;
+}
