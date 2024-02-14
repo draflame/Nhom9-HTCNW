@@ -105,24 +105,35 @@ body{
         font-size: 7px;
         font-weight: 700;
     }
-    
+    .responsive-text-title{
+        font-size: 15px;
+    }
+    .responsive-text{
+        font-size: 10px;
+    }
+    .drag-title h3{
+        font-size: 17px;
+    }
+}
+.card{
+    border: none;
 }
 .slideTours{
     margin: 5% 0;
 
 }
-.card{
+.card-tour{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border: none;
     /* width: 300px; */
     position: relative;
     cursor: pointer;
 }
-.card img{
+.card-tour img{
     filter: brightness(0.6);
     transition: 0.5s ease-in;
 }
-.card-body{
+.card-tour-body{
     position: absolute;
     bottom: 5%;
     left: 5%;
@@ -132,11 +143,43 @@ body{
     transition: 0.5s ease-in;
 }
 
-.card img:hover+.card-body{
+.card-tour img:hover+.card-body{
     bottom: 7%;
     scale: 1.3;
 }
-.card img:hover{
+.card-tour img:hover{
     transform: translateY(-3%);
     filter: brightness(1);
+}
+.drag-items{
+    width: 100%;
+    overflow: auto;
+}
+.drag-items .drag-list{
+    display: flex;
+    width: max-content;
+}
+.drag-items .drag-list .item{
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+}
+.item-text{
+    width: 130px;
+}
+.item-text h4{
+    font-size: 15px;
+}
+.item-text p{
+    font-size: 10px;
+}
+.drag-items .drag-list .item img{
+    width: 50px;
+}
+
+.drag-items::-webkit-scrollbar{
+    width: 0;
+}
+body::-webkit-scrollbar{
+    width: 0;
 }
